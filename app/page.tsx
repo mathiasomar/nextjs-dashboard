@@ -1,5 +1,6 @@
 import AppAreaChart from "@/components/app-area-chart";
 import AppBarChart from "@/components/app-bar-chart";
+import AppPieChart from "@/components/app-pie-chart";
 
 export default function HomePage() {
   return (
@@ -8,7 +9,9 @@ export default function HomePage() {
         <AppBarChart />
       </div>
       <div className="bg-primary-foreground p-4 rounded-lg">Test</div>
-      <div className="bg-primary-foreground p-4 rounded-lg">Test</div>
+      <div className="bg-primary-foreground p-4 rounded-lg">
+        <AppPieChart />
+      </div>
       <div className="bg-primary-foreground p-4 rounded-lg">Test</div>
       <div className="bg-primary-foreground p-4 rounded-lg lg:col-span-2 xl:col-span-1 2xl:col-span-2">
         <AppAreaChart />
