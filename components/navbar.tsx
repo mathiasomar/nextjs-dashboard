@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogOut, Moon, Settings, User } from "lucide-react";
+import { LogOut, Settings, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   DropdownMenu,
@@ -9,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = () => {
   return (
@@ -18,7 +19,9 @@ const Navbar = () => {
       {/* RIGHT */}
       <div className="flex items-center gap-4">
         <Link href={"/"}>Dashboard</Link>
-        <Moon />
+        {/* THEME TOGGLE */}
+        <ModeToggle />
+        {/* USER MENU */}
         <DropdownMenu>
           <DropdownMenuTrigger>
             <Avatar>
