@@ -1,5 +1,6 @@
 import CardList from "@/components/card-list";
 import EditUser from "@/components/edit-user";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
@@ -63,7 +64,7 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Shield
                     size={36}
-                    className="rounded-full bg-green-800/30 border-1 border-green-800/50 p-2"
+                    className="rounded-full bg-green-800/30 border border-green-800/50 p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
@@ -78,7 +79,7 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Candy
                     size={36}
-                    className="rounded-full bg-yellow-500/30 border-1 border-yellow-500/50 p-2"
+                    className="rounded-full bg-yellow-500/30 borde border-yellow-500/50 p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
@@ -92,7 +93,7 @@ const SingleUserPage = () => {
                 <HoverCardTrigger>
                   <Citrus
                     size={36}
-                    className="rounded-full bg-orange-500/30 border-1 border-orange-500/50 p-2"
+                    className="rounded-full bg-orange-500/30 border border-orange-500/50 p-2"
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
@@ -155,7 +156,22 @@ const SingleUserPage = () => {
         {/* RIGHT */}
         <div className="w-full xl:w-2/3 space-y-6">
           {/* USER CARD CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">User Card</div>
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-2">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>OM</AvatarFallback>
+              </Avatar>
+
+              <h1 className="text-xl font-semibold">Omar Mathias</h1>
+            </div>
+
+            <p className="text-sm text-muted-foreground">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis explicabo non quae corrupti dolore minus nihil
+              mollitia, assumenda maiores expedita!
+            </p>
+          </div>
           {/* THE CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">Chart</div>
         </div>
